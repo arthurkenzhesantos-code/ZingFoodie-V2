@@ -49,16 +49,17 @@
             <version>3.5.3</version>
         </dependency>
     </dependencies>
+         
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+            <configuration>
+                <mainClass>com.zingfoodie.ZingFoodieApplication</mainClass>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <mainClass>com.zingfoodie.ZingFoodieApplication</mainClass>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
 </project>
