@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: zingfoodie-campus
+    runtime: docker
+    plan: starter
+    healthCheckPath: /api/health
+    envVars:
+      - key: DB_PATH
+        value: /var/data/zingfoodie.db
+      - key: STAFF_USERNAME
+        value: campusadmin
+      - key: STAFF_PASSWORD
+        sync: false
+      - key: FIREBASE_SERVICE_ACCOUNT_JSON
+        sync: false
+    disk:
+      name: zingfoodie-data
+      mountPath: /var/data
+      sizeGB: 1
